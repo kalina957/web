@@ -1,0 +1,84 @@
+<div *ngIf="checkAddTask">
+    <h2>Add task</h2>
+    <form [formGroup]="addTaskForm" (ngSubmit)="addTask()">
+        <div class="container-addTask">
+            <label>Task name</label>
+            <input class="inputAdd" name="taskName" type="text" placeholder="Enter new task name"
+                formControlName="taskName" required>
+            <div class="inputError" *ngIf="taskName.invalid && (taskName.dirty || taskName.touched)">
+                <div *ngIf="taskName.errors.required">
+                    Enter a new task name
+                </div>
+                <div class="inputError" *ngIf="taskName.errors.minlength">
+                    Name must be atleast 4 characters long
+                </div>
+            </div>
+            <!-- <label>Task description</label>
+            <input class="inputAdd" name="taskDescription1" type="text" placeholder="Enter new task description"
+                formControlName="taskDescription" required>
+            <div *ngIf="taskDescription.invalid && (taskDescription.dirty || taskDescription.touched)">
+                <div class="inputError" *ngIf="taskDescription.errors.required">
+                    Enter a new task description
+                </div>
+            </div> -->
+            <label>Due date</label>
+            <form [formGroup]="addTaskForm" class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+                            #d="ngbDatepicker" formControlName="taskDue_date">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                type="button"></button>
+                        </div>
+                    </div>
+                </div>
+                <div style="color: red;">
+                    Date is required
+                </div>
+            </form>
+            <label>Start date</label>
+            <form [formGroup]="addTaskForm" class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="modelStartDate" ngbDatepicker
+                            #f="ngbDatepicker" formControlName="taskStart_date">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="f.toggle()"
+                                type="button"></button>
+                        </div>
+                    </div>
+                </div>
+                <div style="color: red;">
+                    Date is required
+                </div>
+            </form>
+
+            <div ngbDropdown>
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select
+                    department</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button type="button" *ngFor="let department of departments" ngbDropdownItem
+                        (click)="onSelectDepartment(department)" aria-required="true">{{department.name}}</button>
+                </div>
+            </div>
+            <div style="color: red;">
+                Department is required
+            </div>
+            <div ngbDropdown>
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Select
+                    employee</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                    <button type="button" *ngFor="let employee of employees" ngbDropdownItem
+                        (click)="onSelectEmployee(employee)">{{employee.first_name}} {{employee.last_name}}</button>
+                </div>
+                <div style="color: red;">
+                      Employee is required
+                    </div>
+            </div>
+            <button class="btn" type="submit" [disabled]="!addTaskForm.valid">Add task</button>
+            <button class="btn" type="button" (click)="close()">Close</button>
+
+        </div>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<div  >
+<h4>Set department to employee:</h4>
+<form (submit)="setDepartmentToEmployee()"  >
+ <h6>
+   Employee:
+ </h6>
+ <input type="text" style="margin-bottom: 15px;padding: 10px 8px; display:block" [ngModel]="selectedEmployee?.first_name" (ngModelChange)="selectedEmployee.first_name = $event"  name="EmployeeFirstName">
+ <h6>
+   Department:
+ </h6>
+ <input type="text" style="margin-bottom: 15px;padding: 10px 8px; display:block" [ngModel]="selectedDepartment?.name" (ngModelChange)="selectedDepartment.name = $event"  name="EmployeeDepartment">
+ <button class="btn" type="submit" (click)="setDepartmentToEmployee()"
+     style="color: black; background-color: rgb(240,170,170);border: 2px solid black;">Set department</button>
+</form>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="task">
+    <h2>Task Details:</h2>
+    <div>Id: {{taskId}}</div>
+    <div>Name: {{task.name}}</div>
+    <div *ngIf="department">Department: {{department.name}}</div>
+    <div>Start date: {{task.startDate}}</div>
+    <div>Due date: {{task.due_date}}</div>
+    <div *ngFor="let employee of task.employees">Employee: {{employee.first_name}} 
+        <br>
+    </div>
+    </div>
+  
+
+    

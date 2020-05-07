@@ -1,0 +1,14 @@
+
+<div class="main" style="display: flex">
+<div style="width: 900px;height: 900px;margin-left: 230px;margin-top: 50px;">
+
+<full-calendar  (dateClick)="addTask($event)" (eventClick)="handleDateClick($event)"
+  [plugins]=calendarPlugins
+  [events]=calendarEvents></full-calendar>
+</div>
+<div *ngIf="task" style="margin-top: 110px; margin-left: 30px">
+<app-details-task [taskId]="task.payload.doc.id" [task]="task.payload.doc.data()" [department]="taskDepartment">
+</app-details-task>
+</div>
+<app-add-task  style="margin-top: 110px; margin-left: 40px" [checkAddTask]="checkTask" [modelStartDate]="selectedDate"></app-add-task>
+</div>

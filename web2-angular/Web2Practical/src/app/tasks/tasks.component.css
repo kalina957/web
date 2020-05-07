@@ -1,0 +1,94 @@
+@import '../app.component.css';
+
+.grid-tasks{
+    display: block;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    column-gap: 10px;
+    row-gap: 5px;
+    width: 300px;
+}
+
+.grid-taskItem{
+    background-color: aliceblue;
+    border: 2px solid black;
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    list-style: none;
+    align-content: center;
+}
+
+.grid-tasks li:hover{
+    background-color: #DDD;
+}
+
+.container-tasks{
+    display: flex;
+    flex-wrap:  nowrap;
+}
+
+.btn-task{
+    background-color: gray; 
+    border: none;
+    color: white;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    align-content: center;
+}
+
+.btn-task:hover{
+    background-color: cadetblue;
+}
+
+.grid-tasks-scrol{
+    height: 300px; 
+    overflow-y: scroll;
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    padding-right: 10pt;
+    margin-right: 0.3rem;
+    outline: none; 
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .option-input:checked {
+    background: greenyellow;
+  }
+  .option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+  }
+  

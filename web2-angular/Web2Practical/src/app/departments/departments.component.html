@@ -1,0 +1,75 @@
+<div class="main container" style=" margin-top: 30px;">
+<div class="row">
+<div class="col-sm-4">
+<h2>Departments</h2>
+<div>     
+    <div style = "padding-top: 15pt;">
+            <input type="text"  [(ngModel)]="d" placeholder="Search..">
+            <div style="margin-left:11pt;">
+                <label style="padding-right: 10pt;">
+                  <input type="radio" class="option-input radio" name="choice" value="Sort" (change)="SortByName()"  />
+                  Sort by name
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" (change)="UpdateList()" name="choice" value="NoSort" checked />
+                  Don't sort
+                </label>
+              </div>
+
+    </div>
+    <div class="grid-dep-scrol">
+<ul >
+    <li appDepartmentDirective *ngFor="let department of departmentsList | filterPipe: d" (click)="selectedDepartment= getSelectedDep(department)">
+        <label >id: {{department.id}}, {{department.name}} </label>
+    </li>
+</ul>
+    </div>
+<div>
+        <form [formGroup]="form" (submit)="addDepartment()" >
+            <input type="text" [(ngModel)]="txtDepartment" placeholder="Name for new department" formControlName="depName">
+        <!-- assign variable and some model, does not work without it  -->
+        <div *ngIf="depName.dirty || depName.touched">
+        <div *ngIf="depName.errors?.minlength"> 
+
+                <ngb-alert [dismissible]="false" class="alert">
+                        <strong>Warning!</strong> Name at least 5 characters 
+                      </ngb-alert>
+        </div> 
+        <div *ngIf="depName.errors?.maxlength"> 
+                <ngb-alert [dismissible]="false" class="alert">
+                        <strong>Warning!</strong> Name max 25 characters 
+                      </ngb-alert>
+            </div> 
+        
+        <div *ngIf="depName.errors?.required"> 
+                <ngb-alert [dismissible]="false" class="alert">
+                        <strong>Warning!</strong> Can't be empty
+                      </ngb-alert>
+        </div> 
+        </div>
+            <button  [disabled]="depName.errors?.minlength || depName.errors?.required || depName.errors?.maxlength"  class= "btnAdd" type="submit">Upload new department</button>
+        <!-- when inside div this doesn't work -->
+        </form> 
+        <div (click)="selectedDepartment=null">
+        <button class= "btnAdd" (click)="removeDepartment(selectedDepartment)">Delete department</button>
+        </div>
+        </div>
+
+        
+</div>
+
+</div>
+
+
+
+<div  class="col-sm-4" style="padding-left:50pt;padding-top:16pt;">
+        <app-department-details [department]="selectedDepartment"></app-department-details>  
+    </div>
+    <div class="col-sm-4" style="margin-left: 50pt;">
+        <app-details-employee [employee] = "selectedEmployee">
+            </app-details-employee>
+        </div>
+
+
+    </div>
+</div>

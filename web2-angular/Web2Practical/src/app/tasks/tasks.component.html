@@ -1,0 +1,67 @@
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Tasks</h2>
+            <div class="container-tasks">
+                <div class="grid-tasks">
+                    <div>
+                        <input name="test" [(ngModel)]="d" placeholder="Search" />
+                    </div>
+                    <div style="margin-left:11pt;">
+                        <label style="padding-right: 10pt;">
+                            <input type="radio" class="option-input radio" name="sort" value="Sort"
+                                (change)="SortByName()" />
+                            Sort by name
+                        </label>
+                        <label>
+                            <input type="radio" class="option-input radio" (change)="getData()" name="sort"
+                                value="NoSort" checked />
+                            Don't sort
+                        </label>
+                    </div>
+                    <div class="grid-tasks-scrol">
+                        <ul *ngFor="let task of tasks | filterPipe: d">
+                            <li class="grid-taskItem" (click)="setSelectedTask(task)">
+                                <div *ngIf="getSelectedDep()!=null">
+                                    <label [ngClass]="{'highlight':task.payload.doc.data().department_id==getSelectedDep().id}">
+                                        Name: {{task.payload.doc.data().name}}
+                                    </label>
+                                </div>
+                                <div *ngIf="getSelectedDep()==null">
+                                    <label>
+                                        Name: {{task.payload.doc.data().name}}
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <button type="button" class="btn btn-task" (click)="addTask()">Add task</button>
+                </div>
+            </div>
+        </div>
+        <app-add-task [checkAddTask]="checkTask"></app-add-task>
+        <!--<form (submit)="addTask()">
+    <input class="inputAdd" type="text" [(ngModel)]="taskName" name="task" placeholder="Enter new task name">
+    <input class="inputAdd" type="text" [(ngModel)]="taskDescription" name="task" placeholder="Enter new task description">
+    <button class="btn" type="submit">Add new task</button>
+</form>-->
+
+
+        <!--<input class="inputAdd" type="text" name="task" placeholder="Enter new task description" formControlDesciption="description" required-->
+        <!--<button class="btn" type="submit">Add new task</button>-->
+
+        <div *ngIf="selectedTask" class="col-sm-4">
+            <app-details-task [taskId]="selectedTask.payload.doc.id" [task]="selectedTask.payload.doc.data()" [department]="taskDepartment">
+            </app-details-task>
+            <button type="button" (click)="editTask()" class="btn">Edit task</button>
+            <button type="button" (click)="close()" class="btn">Close</button>
+        </div>
+        <div class="col-sm-4">
+            <app-edit-task [selectedTask1]="checkEditTask">
+
+            </app-edit-task>
+        </div>
+    </div>
+</div>

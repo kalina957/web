@@ -1,0 +1,62 @@
+<div class="jumbotron text-center" style="margin-bottom:0px">
+    <h1>Web2 development</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"  (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse"  id="collapseExample" [ngbCollapse]="!isCollapsed">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="tasks">Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="departments">Departments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="employees">Employees</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="calendar">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="quotes">Programming quotes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="calendarApi">Calendar Api</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<div class="jumbotron text-center" style="margin-top:10px">
+        <p>Footer</p>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBWM5D954UQkGwdE4LRlHt9XdLnsDV6soA",
+    authDomain: "web2-33bf8.firebaseapp.com",
+    databaseURL: "https://web2-33bf8.firebaseio.com",
+    projectId: "web2-33bf8",
+    storageBucket: "web2-33bf8.appspot.com",
+    messagingSenderId: "274545787751",
+    appId: "1:274545787751:web:edf3c66ab5f7c4af22a5c2",
+    measurementId: "G-2MXPDLQ724"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>

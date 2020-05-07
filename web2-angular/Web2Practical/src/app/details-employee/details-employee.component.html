@@ -1,0 +1,12 @@
+<div *ngIf="employee">
+    
+                    <h4>Employee info:</h4>
+    <h6>Employee First Name:</h6>
+    <input style="margin: 4px 2px;padding: 10px 8px; display:block" type="text" [(ngModel)]="employee.first_name" name ="EmployeeName">
+    <h6>Employee Last Name:</h6>
+    <input style="margin: 4px 2px;padding: 10px 8px; display:block" type="text" [(ngModel)]="employee.last_name" name="EmployeeAge">
+    <h6>Employee Date of Birth:</h6>
+    <input style="margin: 4px 2px;padding: 10px 8px; display:block" type="text" [(ngModel)]="employee.birth_date" name="EmployeeAge">
+    <h6>Employee Department:</h6>
+    <input  style="margin: 4px 2px;padding: 10px 8px; display:block" type="text" [(ngModel)]="employee.department_id" name="EmployeeDep">
+</div>

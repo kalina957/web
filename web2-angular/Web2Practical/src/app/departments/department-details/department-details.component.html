@@ -1,0 +1,46 @@
+<form form [formGroup]="form" (submit)="updateDepartment()">
+<div *ngIf="department!=null" style="font-size: 15pt;" >
+    <h3>{{department.name | uppercase}}</h3>
+    <div><span>id: </span>{{department.id}}</div>
+    <div>      
+      <label >name:
+        <input style="margin: 4px 2px;padding: 10px 8px;" placeholder="name" formControlName="depName"/>
+      </label>
+      <ul>
+          <li *ngFor="let employee of getEmployeesDepartment()">
+              <label> {{employee.first_name}} {{employee.last_name}} </label>
+          </li>
+  </ul>
+      <div *ngIf="depName.dirty || depName.touched" style="color:red;">
+        <div *ngIf="depName.errors?.minlength"> 
+         <ngb-alert [dismissible]="false" class="alert">
+                        <strong>Warning!</strong> Name at least 5 characters 
+                      </ngb-alert>
+        </div> 
+        <div *ngIf="depName.errors?.maxlength"> 
+            <ngb-alert [dismissible]="false" class="alert">
+                <strong>Warning!</strong> Name max 25 characters 
+              </ngb-alert>
+            </div> 
+        
+        <div *ngIf="depName.errors?.required"> 
+            <ngb-alert [dismissible]="false" class="alert">
+                <strong>Warning!</strong> Can't be empty
+              </ngb-alert>
+        </div> 
+        </div>
+     
+            <button [disabled] = "depName.errors?.minlength || depName.errors?.required || depName.errors?.maxlength"  class= "btnAdd" type="submit">Change name</button>
+            <button class="btnAdd" style="margin-left:7pt;" (click)="department=null" class="btn">Close</button>
+        <!-- when inside div this doesn't work -->
+    </div>      
+  </div>
+  </form>
+
+  <!-- <form  (submit)="removeDeparment(department)"> -->
+   
+<!-- </form> -->
+  
+
+  
+  <!--  -->

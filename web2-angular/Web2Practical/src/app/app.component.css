@@ -1,0 +1,76 @@
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none; /*cannot copy the text*/
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+
+/* DEPARTMENTS BUTTONS STYLING */
+.btnAdd{
+    display: block;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 36px;
+    text-align: center;
+    text-decoration: none; /*cannot copy the text*/
+    font-size: 16px;
+    margin: 10px 2px;
+    margin-left:10px;
+    width:255px;
+    border-radius: 5px;
+}
+.btnAdd:disabled,
+.btnAdd[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+/* DEPARTMENTS BUTTONS STYLING */
+
+  .btn:hover
+  {
+      background-color: #037d50;
+  }
+  .grid-item{
+    background-color: aliceblue;
+    border: 2px solid black;
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.inputAdd{
+    margin: 4px 2px;
+    padding: 10px 8px;
+    display: block;
+}
+
+.inputError{
+    color: red;
+}
+
+label.highlight
+{
+  color:red;
+  font-style:italic;
+}
+
+
+
+

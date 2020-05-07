@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/dist/styles/ag-grid.css";/*structure*/
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";/*styling*/
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
+
+
+
+
+
+
+
+/* in the departments.css doesn't work */

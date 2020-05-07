@@ -1,0 +1,64 @@
+@import '../app.component.css';
+.grid-employees{
+    display: block;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    border-radius: 10px;
+    column-gap: 5px;
+    row-gap: 5px; 
+    width: 300px;
+}
+.grid-employees-item{
+    background-color: rgb(240,170,170);
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    list-style: none;
+    height: 15%;
+    margin:10px;
+}
+.grid-employees li:hover{
+    background-color: rgb(240,190,190);
+}
+ .flexCont{
+     justify-content: space-around;
+ }
+ .radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background:  rgb(240,190,190);
+    
+    border: 2px solid black;
+    color: #fff;
+    display: inline-block;
+    padding-right: 10pt;
+    margin-right: 0.3rem;
+    margin-bottom: 10px;
+    outline: none; 
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .radio:checked {
+    background:rgb(55, 202, 55)
+  }
+  .radio:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+  }

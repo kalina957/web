@@ -1,0 +1,17 @@
+<div *ngIf="checkAddEmployee">
+        <h4>Upload new employee:</h4>
+    <form (submit)="addEmployee()">
+        <h6>Employee First Name:</h6>
+        <input style="margin: 4px 2px;padding: 10px 8px; display:block" type="text" [(ngModel)]="txtEmployeeFirstName"
+            name="txtEmployeeFirstName">
+            <h6>Employee Last Name:</h6>
+            <input style="margin-bottom: 15px;padding: 10px 8px; display:block" type="text" [(ngModel)]="txtEmployeeLastName"
+                name="EmployeeLastName">
+        <h6>Employee Birth Date:</h6>
+        <input style="margin-bottom: 15px;padding: 10px 8px; display:block" type="text" [(ngModel)]="txtEmployeeBirthDate"
+            name="EmployeeBirthDate">
+        <button class="btn" type="submit"
+            style="color: black; background-color: rgb(240,170,170); border: 2px solid black;">Upload new
+            employee</button>
+    </form>
+    </div>
