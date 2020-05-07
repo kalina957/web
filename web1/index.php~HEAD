@@ -1,0 +1,37 @@
+<?php
+
+$title = "Amira Watches";
+include 'header.php'; 
+?>
+<div class="centered">Welcome to Amira</div>
+
+
+   
+</div>
+<div class="text">
+        <h2>Watch our video</h2>
+       <img src="play.png" alt=""class="contact-pics">
+    </div>
+    <div class="vl"></div>
+    <div id='video-wrap'>
+        <video id='video' controls>
+            <source src="galaxy.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="text">
+        <h1>Follow us</h1>
+        <a href="http://www.insta.com"><img src="insta5.png" alt=""class="contact-pics"></a>
+    </div>
+    <div class="vl"></div>
+    <div id='pictures'>
+        <img src="./images/jew1.jpg" alt="" class="pic">
+        <img src="./images/jew2.jpg" alt=""class="pic">
+        <img src="./images/jew3.jpg" alt=""class="pic">
+        <img src="./images/jew4.jpg" alt=""class="pic">
+        <img src="./images/jew5.jpg" alt=""class="pic">
+        <img src="./images/jew6.jpg" alt=""class="pic">
+    </div>
+<?php
+include 'footer.php';
+?>
+

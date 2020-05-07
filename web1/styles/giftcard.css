@@ -1,0 +1,179 @@
+.btn-enter{
+    background-color: burlywood;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 16px;
+}
+h1{
+    text-align: center;
+}
+a:link {
+    color: black;
+}
+
+#pictures img{
+    object-fit: fill;
+    width: 180px;
+    height: auto;
+}
+
+#pictures {
+   margin: 50px; 
+   display:flex ;  
+   justify-content: space-around ;
+   align-content: space-around; 
+   align-items: center;
+   border:2px;
+}
+#contact-buttons-wrap {
+     flex: 1; width:100%; 
+     height: 100px;
+     background-color: rgb(247, 238, 238);
+    }
+ .contact-pics{
+    margin: 20px 5px; 
+    float: left; 
+    background-color: black; 
+    width: 40px;
+    height: 40px; 
+    display: block; 
+    border-radius: 50%;
+}
+
+
+.contact-pics{
+  margin: 20px 5px; 
+  float: left; 
+  background-color: black; 
+  width: 40px;
+  height: 40px; 
+  display: block; 
+  border-radius: 50%;
+}
+
+#buttons-menu {
+  width:100%; 
+  height: 13px;
+  background-color: 
+  rgb(255, 255, 255);
+  padding: 30px 0px; 
+  display:flex; 
+  justify-content:space-around;
+  list-style-type: none;
+  margin-top: -20px;
+  
+  }
+  
+  .buttons a:hover {
+  
+  color: rgb(243, 180, 180);
+  }
+  
+  .link-buttons{
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  color: black;
+  font-weight: bold;
+  
+  }
+  #logo{
+  margin-top:-15px;
+  }
+  .cart{
+      margin-top: -10px;
+      background-color: rgb(243, 180, 180);
+  }
+
+
+#video-wrap{
+background-image:  url('../images/cream-background.jpg'); 
+padding:30px;
+}
+#video{
+    display:block; 
+    margin: 50px auto; 
+    width: 650px
+    }
+    #contact-block-1{
+    flex: 1; 
+    background-image:  url('../images/cream-background.jpg');
+} #contact-block-2{
+    flex:1; 
+    background-image:  url('../images/cream-background.jpg'); 
+    border:0px;
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+ 
+}
+
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(247, 238, 238,0.8);
+  padding: 15px;
+  margin-left: 640px;
+  margin-top: -250px;
+  margin-bottom: 100px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin-left: 100px;
+  margin-top: 90px;
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+

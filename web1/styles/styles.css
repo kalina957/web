@@ -1,0 +1,157 @@
+  body{
+    background-color:rgba(253, 215, 215, 0.6);
+  }
+  .btn-enter{
+    background-color: burlywood;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  h1{
+    text-align: center;
+  }
+  a:link {
+    color: black;
+  }
+
+  #pictures img{
+    object-fit: fill;
+    width: 180px;
+    height: auto;
+  }
+
+  #pictures {
+  margin: 50px; 
+  display:flex ;  
+  justify-content: space-around ;
+  align-content: space-around; 
+  align-items: center;
+  border:2px;
+
+  }
+ 
+  .contact-buttons-wrap {
+    flex: 1; width:100%; 
+    height: 100px;
+    background-color: rgb(245, 139, 139);
+    }
+
+  .contact-pics{
+    margin: 20px 5px; 
+    float: right; 
+    /*background-color: black; */
+    width: 40px;
+    height: 40px; 
+    display: block; 
+    border-radius: 50%;
+    margin-top: 35px;
+    
+  }
+  .text{
+    display:flex;
+    margin-left:640px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    
+  }
+  #buttons-menu {
+    width:100%; 
+    height: 13px;
+    background-color: 
+    rgb(255, 255, 255);
+    padding: 30px 0px; 
+    display:flex; 
+    justify-content:space-around;
+    list-style-type: none;
+    margin-top: -20px;
+    
+    }
+    
+    .buttons a:hover {
+    
+    color: rgb(243, 180, 180);
+    }
+    
+    .link-buttons{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    
+    }
+    #logo{
+    margin-top:-15px;
+    }
+    .cart{
+        margin-top: -10px;
+        background-color: rgb(243, 180, 180);
+        border-radius: 20%; 
+    }
+
+
+  #video-wrap{
+  /*background-image:  url('../images/cream-background.jpg'); */
+  padding:30px;
+  }
+  #video{
+    display:block; 
+    margin: 50px auto; 
+    width: 950px
+    }
+    #contact-block-1{
+    flex: 1; 
+    background-image:  url('../images/cream-background.jpg');
+    
+  } #contact-block-2{
+    flex:1; 
+    background-image:  url('../images/cream-background.jpg'); 
+    border:0px;
+  }
+  .hero-image{
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-bottom: 250px;
+    position: relative;
+    width:100%;
+    height: 500px;
+    margin-bottom: 30px;
+  
+  }   
+
+  .centered{background-color: white;
+    font-size: 60px;; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .pic{
+    transition: transform .2s;
+  }
+  .pic:hover {
+    transform: scale(1.5); 
+  }
+  .vl  {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid white;
+    margin:  20px 200px;;
+    padding: 0;
+    margin-top:30px;
+}
+
+
+
+
+
+
+    
